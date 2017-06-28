@@ -9,16 +9,20 @@ import {NotFoundComponent} from './not-found/not-found.component';
 
 const routes: Routes = [{
   path: '',
-  component: HomeComponent
+  component: HomeComponent,
+  data: { title: 'Home' }
 }, {
   path: 'login',
-  component: LoginComponent
+  component: LoginComponent,
+  data: { title: 'Login' }
 }, {
   path: 'register',
-  component: RegisterComponent
+  component: RegisterComponent,
+  data: { title: 'Register' }
 }, {
     path: '**',
-    component: NotFoundComponent
+    component: NotFoundComponent,
+  data: { title: '404' }
 }];
 
 @NgModule({
